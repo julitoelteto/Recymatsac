@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones Recymat S.A.C. | Empresa Operadora de Residuos Sólidos</title>
+    <meta name="description" content="Inversiones Recymat S.A.C. - Aliado estratégico en gestión ambiental, recolección, transporte y valorización de residuos sólidos no peligrosos y peligrosos. Registro MINAM EO-RS N° D000110-2026.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Poppins & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuración personalizada de Tailwind CSS (Paleta Plomo & Cobre Metalizado) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        // Paleta Cobre / Bronce Metalizado
+                        copper: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            400: '#fb923c',
+                            500: '#d97706',
+                            600: '#c25e00', // Cobre Primario
+                            700: '#9a4700',
+                            800: '#7c3a00',
+                            900: '#5c2a00',
+                        },
+                        // Paleta Plomo / Gris Oscuro Pizarra
+                        slateCustom: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b', // Plomo Oscuro
+                            900: '#0f172a', // Plomo Fondo Principal
+                            950: '#090d16',
+                        },
+                        whatsappGreen: '#25D366'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Gradiente cobre metalizado */
+        .bg-copper-gradient {
+            background: linear-gradient(135deg, #d97706 0%, #c25e00 50%, #853e00 100%);
+        }
+        .text-copper-gradient {
+            background: linear-gradient(135deg, #fb923c 0%, #d97706 50%, #c25e00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-copper-gradient {
+            border-image: linear-gradient(to right, #d97706, #c25e00) 1;
+        }
+
+        /* Clips geométricos de estilo industrial */
+        .hero-clip {
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+
+        /* Ocultar vistas inactivas */
+        .page-view {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .page-view.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Estado activo en navegación */
+        .nav-link.active-nav {
+            color: #d97706;
+            border-bottom: 2px solid #c25e00;
+        }
+    </style>
+</head>
+<body class="bg-slateCustom-50 text-slateCustom-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ==========================================
+         1. BARRA SUPERIOR (TOPBAR)
+    =========================================== -->
+    <div class="bg-slateCustom-950 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slateCustom-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+            <!-- Contacto Rápido -->
+            <div class="flex flex-wrap items-center gap-6">
+                <a href="tel:51946353506" class="flex items-center space-x-2 hover:text-copper-400 transition">
+                    <i class="fa-solid fa-phone text-copper-500"></i>
+                    <span>+51 946 353 506</span>
+                </a>
+                <a href="mailto:comercialrecymat@gmail.com" class="flex items-center space-x-2 hover:text-copper-400 transition">
+                    <i class="fa-solid fa-envelope text-copper-500"></i>
+                    <span>comercialrecymat@gmail.com</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-2 text-slate-400">
+                    <i class="fa-solid fa-location-dot text-copper-500"></i>
+                    <span>Prol. Chimpu Ocllo, Puente Piedra (Rosa Luz), Lima</span>
+                </div>
+            </div>
+
+            <!-- Registro MINAM Badge -->
+            <div class="flex items-center space-x-2 bg-copper-900/40 px-3 py-1 rounded-full border border-copper-600/40 text-[11px] font-medium text-copper-200">
+                <i class="fa-solid fa-award text-copper-400"></i>
+                <span>MINAM Reg: EO-RS N° D000110-2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         2. MENÚ DE NAVEGACIÓN PRINCIPAL (HEADER)
+    =========================================== -->
+    <header class="bg-slateCustom-900 text-white sticky top-0 z-50 shadow-lg border-b border-slateCustom-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
+            
+            <!-- Logo Oficial RECYMAT S.A.C. (Inspirado en el PDF) -->
+            <a href="#inicio" onclick="navigateTo('inicio')" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-xl bg-slateCustom-800 border border-copper-500/40 flex items-center justify-center text-copper-400 text-2xl shadow-md group-hover:border-copper-500 transition duration-300">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-black text-xl tracking-tight leading-none block text-white">
+                        RECYMAT <span class="text-copper-500 text-sm font-extrabold">S.A.C.</span>
+                    </span>
+                    <span class="block text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-0.5">
+                        Empresa Operadora de Residuos
+                    </span>
+                </div>
+            </a>
+
+            <!-- Menú Principal (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-7 font-heading text-xs uppercase tracking-wider font-semibold text-slate-300">
+                <button onclick="navigateTo('inicio')" id="nav-inicio" class="nav-link hover:text-copper-400 py-1 transition">Inicio</button>
+                <button onclick="navigateTo('nosotros')" id="nav-nosotros" class="nav-link hover:text-copper-400 py-1 transition">Nosotros</button>
+                <button onclick="navigateTo('servicios')" id="nav-servicios" class="nav-link hover:text-copper-400 py-1 transition">Servicios</button>
+                <button onclick="navigateTo('desarrollo-sostenible')" id="nav-desarrollo-sostenible" class="nav-link hover:text-copper-400 py-1 transition">Desarrollo Sostenible</button>
+                <button onclick="navigateTo('contacto')" id="nav-contacto" class="nav-link hover:text-copper-400 py-1 transition">Contacto</button>
+            </nav>
+
+            <!-- Botón Cotizar Header -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <button onclick="navigateTo('contacto')" 
+                        class="bg-copper-gradient hover:opacity-90 text-white font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md transition duration-200">
+                    Cotizar Ahora
+                </button>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none p-1">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Menú desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slateCustom-950 border-t border-slateCustom-800 px-6 py-5 space-y-4 shadow-2xl">
+            <button onclick="navigateTo('inicio')" class="block font-heading uppercase text-xs font-bold text-white py-1">Inicio</button>
+            <button onclick="navigateTo('nosotros')" class="block font-heading uppercase text-xs font-bold text-slate-300 py-1">Nosotros</button>
+            <button onclick="navigateTo('servicios')" class="block font-heading uppercase text-xs font-bold text-slate-300 py-1">Servicios</button>
+            <button onclick="navigateTo('desarrollo-sostenible')" class="block font-heading uppercase text-xs font-bold text-slate-300 py-1">Desarrollo Sostenible</button>
+            <button onclick="navigateTo('contacto')" class="block font-heading uppercase text-xs font-bold text-slate-300 py-1">Contacto</button>
+            <div class="pt-3 border-t border-slateCustom-800">
+                <a href="https://wa.me/51946353506" target="_blank" class="flex items-center justify-center space-x-2 bg-copper-600 text-white font-bold py-3 rounded-xl w-full text-xs uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contactar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- =================================================================
+             VISTA 1: INICIO (HOME - VISTA RESUMIDA Y PANORÁMICA)
+        ================================================================== -->
+        <div id="view-inicio" class="page-view active">
+            
+            <!-- Hero Banner -->
+            <section class="bg-gradient-to-br from-slateCustom-950 via-slateCustom-900 to-slateCustom-800 text-white py-16 lg:py-24 relative overflow-hidden border-b border-copper-600/30">
+                <div class="absolute inset-0 bg-[radial-gradient(#c25e00_1px,transparent_1px)] [background-size:28px_28px] opacity-10"></div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    
+                    <!-- Columna Izquierda: Mensaje Principal -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-slateCustom-800/80 border border-copper-500/40 px-3.5 py-1.5 rounded-full text-xs text-copper-300 font-semibold">
+                            <i class="fa-solid fa-leaf text-copper-500"></i>
+                            <span>Operadora de Residuos Sólidos Autorizada</span>
+                        </div>
+
+                        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
+                            Recolección y transportes de residuos sólidos no peligrosos y peligrosos
+                        </h1>
+
+                        <p class="text-slate-300 text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Tu aliado estratégico en gestión ambiental, logística y valorización de residuos. Soluciones normadas para mitigar el impacto ambiental en industrias del Perú.
+                        </p>
+
+                        <!-- Viñetas de Confianza -->
+                        <div class="space-y-3 pt-2 text-left inline-block">
+                            <div class="flex items-center space-x-3 text-sm text-slate-200">
+                                <i class="fa-solid fa-circle-check text-copper-500 text-base"></i>
+                                <span>Constancia oficial de valorización de residuos</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm text-slate-200">
+                                <i class="fa-solid fa-circle-check text-copper-500 text-base"></i>
+                                <span>Empresa registrada en el MINAM (EO-RS N° D000110-2026)</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm text-slate-200">
+                                <i class="fa-solid fa-circle-check text-copper-500 text-base"></i>
+                                <span>Empresa certificada con altos estándares de trazabilidad</span>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Acción -->
+                        <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
+                            <button onclick="navigateTo('contacto')" 
+                                    class="bg-copper-gradient hover:opacity-90 text-white font-heading font-bold px-8 py-4 rounded-xl shadow-xl transition duration-200 text-xs uppercase tracking-wider flex items-center space-x-2">
+                                <span>Cotice Aquí</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                            
+                            <button onclick="navigateTo('servicios')" 
+                                    class="bg-slateCustom-800 hover:bg-slateCustom-700 text-slate-200 border border-slateCustom-600 font-heading font-semibold px-7 py-4 rounded-xl transition duration-200 text-xs uppercase tracking-wider flex items-center space-x-2">
+                                <i class="fa-solid fa-truck-box text-copper-400"></i>
+                                <span>Nuestros Servicios</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Tarjeta Visual -->
+                    <div class="lg:col-span-5">
+                        <div class="hero-clip relative bg-slateCustom-950 p-2 border-2 border-copper-600/40 shadow-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=900" 
+                                 alt="Operaciones Recymat S.A.C." 
+                                 class="w-full h-80 sm:h-96 object-cover rounded-3xl opacity-90">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-slateCustom-950 via-transparent to-transparent"></div>
+
+                            <div class="absolute bottom-6 left-6 right-6 bg-slateCustom-900/90 backdrop-blur-md p-4 rounded-2xl border border-copper-500/30">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl shrink-0">
+                                        <i class="fa-solid fa-shield-virus"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-heading font-bold text-xs uppercase text-white">Garantía Normativa</h4>
+                                        <p class="text-[11px] text-slate-300">Cumplimiento estricto exigido por el MINAM para el sector industrial.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Resumen Nosotros en Inicio -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-6 space-y-5">
+                            <span class="text-copper-600 font-heading font-bold text-xs uppercase tracking-widest">Sobre Nosotros</span>
+                            <h2 class="font-heading text-3xl font-extrabold text-slateCustom-900">
+                                10+ Años Conectando la Industria con Soluciones Sostenibles
+                            </h2>
+                            <p class="text-slateCustom-600 text-sm leading-relaxed">
+                                Con más de una década de trayectoria en el sector ambiental, <strong class="text-slateCustom-900">Inversiones Recymat S.A.C.</strong> es una empresa especializada en la gestión integral de residuos sólidos industriales, comerciales y peligrosos.
+                            </p>
+                            <p class="text-slateCustom-600 text-sm leading-relaxed">
+                                Conectamos las necesidades de manejo de residuos de las grandes industrias del Perú con procesos eficientes, seguros y certificados de valorización y reciclaje.
+                            </p>
+                            <div>
+                                <button onclick="navigateTo('nosotros')" 
+                                        class="inline-flex items-center space-x-2 text-copper-600 hover:text-copper-700 font-heading font-bold text-xs uppercase tracking-wider pt-2 group">
+                                    <span>Conocer más sobre Nosotros</span>
+                                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition duration-200"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="p-6 bg-slateCustom-50 border border-slateCustom-200 rounded-2xl text-center">
+                                <i class="fa-solid fa-industry text-3xl text-copper-600 mb-2"></i>
+                                <span class="block text-3xl font-black text-slateCustom-900">10+</span>
+                                <span class="text-xs text-slateCustom-600 uppercase font-semibold">Años de Trayectoria</span>
+                            </div>
+                            <div class="p-6 bg-slateCustom-50 border border-slateCustom-200 rounded-2xl text-center">
+                                <i class="fa-solid fa-certificate text-3xl text-copper-600 mb-2"></i>
+                                <span class="block text-3xl font-black text-slateCustom-900">EO-RS</span>
+                                <span class="text-xs text-slateCustom-600 uppercase font-semibold">Registro MINAM</span>
+                            </div>
+                            <div class="p-6 bg-slateCustom-50 border border-slateCustom-200 rounded-2xl text-center">
+                                <i class="fa-solid fa-truck-moving text-3xl text-copper-600 mb-2"></i>
+                                <span class="block text-3xl font-black text-slateCustom-900">Flota</span>
+                                <span class="text-xs text-slateCustom-600 uppercase font-semibold">Autorizada</span>
+                            </div>
+                            <div class="p-6 bg-slateCustom-50 border border-slateCustom-200 rounded-2xl text-center">
+                                <i class="fa-solid fa-flag text-3xl text-copper-600 mb-2"></i>
+                                <span class="block text-3xl font-black text-slateCustom-900">100%</span>
+                                <span class="text-xs text-slateCustom-600 uppercase font-semibold">Empresa Peruana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen Servicios en Inicio -->
+            <section class="py-16 bg-slateCustom-900 text-white border-y border-slateCustom-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-copper-400 font-heading font-bold text-xs uppercase tracking-widest">Nuestros Servicios</span>
+                        <h2 class="font-heading text-3xl font-extrabold text-white mt-1">Soluciones Integrales de Manejo de Residuos</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Card Resumen 1 -->
+                        <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-copper-500 transition duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-copper-400 flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white mb-2">Residuos Aprovechables (No Peligrosos)</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                    Compra y aprovisionamiento comercial de RAEE, metales ferrosos/no ferrosos, plásticos industriales y pallets.
+                                </p>
+                            </div>
+                            <button onclick="navigateTo('servicios')" class="text-copper-400 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2 hover:underline">
+                                <span>Detalles del servicio</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Card Resumen 2 -->
+                        <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-copper-500 transition duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-copper-400 flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-biohazard"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white mb-2">Residuos Peligrosos</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                    Recolección, transporte acondicionado, disposición final en relleno de seguridad y entrega de certificados.
+                                </p>
+                            </div>
+                            <button onclick="navigateTo('servicios')" class="text-copper-400 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2 hover:underline">
+                                <span>Detalles del servicio</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Card Resumen 3 -->
+                        <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-copper-500 transition duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-copper-400 flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-truck-ramp-box"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white mb-2">Logística & Montacargas</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                    Alquiler de maquinarias con operadores certificados, segregación en fuente y servicios de estiba.
+                                </p>
+                            </div>
+                            <button onclick="navigateTo('servicios')" class="text-copper-400 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2 hover:underline">
+                                <span>Detalles del servicio</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-10">
+                        <button onclick="navigateTo('servicios')" 
+                                class="bg-copper-gradient hover:opacity-90 text-white font-heading font-bold px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider inline-flex items-center space-x-2">
+                            <span>Ver Todos los Servicios Detallados</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen Certificaciones en Inicio -->
+            <section class="py-16 bg-white border-b border-slateCustom-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+                    <span class="text-copper-600 font-heading font-bold text-xs uppercase tracking-widest">Sistema de Gestión Integrado</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slateCustom-900 mt-1 mb-8">
+                        Certificaciones & Estándares Internacionales
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                        <div class="p-5 rounded-2xl bg-slateCustom-50 border border-slateCustom-200">
+                            <span class="font-heading font-black text-xl text-copper-600 block">ISO 9001</span>
+                            <span class="text-xs text-slateCustom-600 font-medium">Gestión de Calidad</span>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slateCustom-50 border border-slateCustom-200">
+                            <span class="font-heading font-black text-xl text-copper-600 block">ISO 14001</span>
+                            <span class="text-xs text-slateCustom-600 font-medium">Medio Ambiente</span>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slateCustom-50 border border-slateCustom-200">
+                            <span class="font-heading font-black text-xl text-copper-600 block">ISO 45001</span>
+                            <span class="text-xs text-slateCustom-600 font-medium">Seguridad & Salud</span>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slateCustom-50 border border-slateCustom-200">
+                            <span class="font-heading font-black text-xl text-copper-600 block">ISO 37001</span>
+                            <span class="text-xs text-slateCustom-600 font-medium">Antisoborno</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button onclick="navigateTo('desarrollo-sostenible')" class="text-copper-600 font-heading text-xs font-bold uppercase tracking-wider hover:underline">
+                            Conocer nuestro compromiso ambiental →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clientes Destacados -->
+            <section class="py-12 bg-slateCustom-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <p class="text-center font-heading text-xs font-bold uppercase tracking-widest text-slateCustom-500 mb-6">
+                        Empresas que confían en nuestra gestión
+                    </p>
+                    <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 opacity-80">
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">MAESTRO</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">SODIMAC</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">PROMART</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">METRO</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">WONG</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">DON BELISARIO</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">HEINEKEN</span>
+                        <span class="px-4 py-2 bg-white rounded-lg font-bold text-slateCustom-800 text-xs shadow-sm">LLAMAGAS</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- =================================================================
+             VISTA 2: NOSOTROS (PÁGINA DETALLADA)
+        ================================================================== -->
+        <div id="view-nosotros" class="page-view">
+            <!-- Header Banner Vista -->
+            <div class="bg-gradient-to-r from-slateCustom-950 via-slateCustom-900 to-slateCustom-800 text-white py-12 border-b border-copper-600/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <span class="text-copper-400 font-heading text-xs font-bold uppercase tracking-widest">Inversiones Recymat S.A.C.</span>
+                    <h1 class="font-heading text-3xl sm:text-4xl font-extrabold mt-1">Nosotros & Trayectoria</h1>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 py-16 space-y-16">
+                
+                <!-- Sección Historia Completa -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slateCustom-900">
+                            Más de 10 Años de Experiencia Técnica en Campo
+                        </h2>
+                        <p class="text-slateCustom-700 leading-relaxed text-sm">
+                            Con más de 10 años de trayectoria en el sector ambiental, somos una empresa especializada en la gestión integral de residuos sólidos industriales, comerciales y peligrosos. Conectamos las necesidades de manejo de residuos de las grandes industrias con procesos eficientes, seguros y sostenibles de valorización y reciclaje.
+                        </p>
+                        <p class="text-slateCustom-700 leading-relaxed text-sm">
+                            A lo largo de una década de experiencia técnica en campo, nos hemos consolidado como un aliado estratégico alineado a las exigencias normativas del sector, garantizando a nuestros clientes trazabilidad, responsabilidad ambiental y cumplimiento de altos estándares operativos.
+                        </p>
+                        <div class="p-4 rounded-xl bg-slateCustom-900 text-white border-l-4 border-copper-600 text-xs font-mono">
+                            RUC: 20613936328 | Registro MINAM: EO-RS N° D000110-2026-MINAM-VMGA-DGGRS
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="rounded-3xl bg-slateCustom-900 p-8 text-white space-y-6 shadow-2xl relative overflow-hidden">
+                            <div class="w-12 h-12 rounded-xl bg-copper-600 flex items-center justify-center text-2xl text-white">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl">Compromiso Corporativo</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Operamos con estrictas políticas medioambientales en cada etapa de acopio, transporte y valorización, protegiendo a su empresa contra sanciones legales y mejorando sus indicadores de sostenibilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Misión y Visión Tarjetas -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Tarjeta Misión -->
+                    <div class="p-8 rounded-2xl bg-white border border-slateCustom-200 shadow-md hover:border-copper-500 transition duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slateCustom-900 mb-3">Nuestra Misión</h3>
+                        <p class="text-slateCustom-700 text-sm leading-relaxed">
+                            Brindar soluciones integrales, seguras y eficientes en la gestión de residuos sólidos peligrosos y no peligrosos, conectando la actividad industrial con procesos sostenibles de reciclaje, valorización y disposición final, bajo estricto cumplimiento normativo y garantizando la trazabilidad en cada etapa del proceso.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta Visión -->
+                    <div class="p-8 rounded-2xl bg-slateCustom-900 text-white shadow-md border border-slateCustom-800">
+                        <div class="w-12 h-12 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white mb-3">Nuestra Visión</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Ser reconocidos como una empresa líder y referente en el sector de la gestión ambiental e intermediación de residuos industriales a nivel nacional, impulsando la economía circular de nuestros clientes a través de innovación operativa, excelencia en el servicio y un firme compromiso con la sostenibilidad del medio ambiente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 Pilares: ¿Por qué elegirnos? -->
+                <div>
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-copper-600 font-heading font-bold text-xs uppercase tracking-widest">Ventajas Competitivas</span>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slateCustom-900 mt-1">¿Por qué elegir Recymat S.A.C.?</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 text-center shadow-sm">
+                            <div class="w-12 h-12 mx-auto rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-sm mb-1">Amplia Experiencia</h4>
+                            <p class="text-xs text-slateCustom-600">Más de 10 años resolviendo requerimientos ambientales en campo.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 text-center shadow-sm">
+                            <div class="w-12 h-12 mx-auto rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-sm mb-1">Confianza y Garantía Legal</h4>
+                            <p class="text-xs text-slateCustom-600">Registro EO-RS vigente en el MINAM y respaldo normativo.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 text-center shadow-sm">
+                            <div class="w-12 h-12 mx-auto rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-sm mb-1">Personal Capacitado</h4>
+                            <p class="text-xs text-slateCustom-600">Técnicos calificados con EPPs normados para maniobras seguras.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 text-center shadow-sm">
+                            <div class="w-12 h-12 mx-auto rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-sm mb-1">Empresa 100% Peruana</h4>
+                            <p class="text-xs text-slateCustom-600">Comprometidos con el desarrollo industrial responsable del Perú.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =================================================================
+             VISTA 3: SERVICIOS (PÁGINA DETALLADA CON BLOQUES Y PROCEDIMIENTOS)
+        ================================================================== -->
+        <div id="view-servicios" class="page-view">
+            <!-- Header Banner Vista -->
+            <div class="bg-gradient-to-r from-slateCustom-950 via-slateCustom-900 to-slateCustom-800 text-white py-12 border-b border-copper-600/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <span class="text-copper-400 font-heading text-xs font-bold uppercase tracking-widest">Catálogo Operativo</span>
+                    <h1 class="font-heading text-3xl sm:text-4xl font-extrabold mt-1">Servicios Técnicos & Soluciones</h1>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 py-16 space-y-16">
+                
+                <!-- LOS 3 BLOQUES DETALLADOS DE SERVICIOS -->
+                <div class="space-y-12">
+                    
+                    <!-- Bloque 1 -->
+                    <div class="bg-white rounded-3xl border border-slateCustom-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-slateCustom-900 text-white p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="bg-copper-600 text-white text-[10px] font-heading font-bold uppercase tracking-widest px-3 py-1 rounded-full">Bloque 01</span>
+                                <h3 class="font-heading font-bold text-xl mt-4 mb-2">Compra y Aprovisionamiento de Residuos Aprovechables (No Peligrosos)</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Compramos y gestionamos materiales industriales con valor comercial, promoviendo la economía circular.
+                                </p>
+                            </div>
+                            <div class="pt-6">
+                                <button onclick="navigateTo('contacto')" class="w-full bg-copper-gradient text-white font-heading font-bold text-xs uppercase py-3 rounded-xl">
+                                    Cotizar Materiales
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slateCustom-50">
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-laptop text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">RAEE</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Equipos de cómputo, chatarra electrónica y artefactos en desuso.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-cubes text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Metales Ferrosos y No Ferrosos</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Chatarra de fierro, acero, aluminio, cobre, bronce y aleaciones.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-bottle-water text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Plásticos Industriales</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Polietileno (HDPE, LDPE), PET, PP, stretch film y contenedores.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-pallet text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Maderas y Pallets</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Parihuelas en desuso y restos de embalaje industrial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 2 -->
+                    <div class="bg-white rounded-3xl border border-slateCustom-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-copper-700 text-white p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="bg-slateCustom-900 text-white text-[10px] font-heading font-bold uppercase tracking-widest px-3 py-1 rounded-full">Bloque 02</span>
+                                <h3 class="font-heading font-bold text-xl mt-4 mb-2">Gestión Integral de Residuos Peligrosos</h3>
+                                <p class="text-xs text-copper-100 leading-relaxed">
+                                    Soluciones seguras, especializadas y bajo estricto cumplimiento de las normativas ambientales vigentes.
+                                </p>
+                            </div>
+                            <div class="pt-6">
+                                <button onclick="navigateTo('contacto')" class="w-full bg-slateCustom-900 text-white font-heading font-bold text-xs uppercase py-3 rounded-xl">
+                                    Solicitar Gestión Peligrosa
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-slateCustom-50">
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-truck-hazard text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Recolección y Transporte</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Flota acondicionada para aceites usados, baterías, químicos y envases contaminados.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-dumpster-fire text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Tratamiento y Disposición</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Gestión en rellenos de seguridad autorizados para confinamiento o neutralización.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-file-shield text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Certificación Oficial</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Manifiestos de Manejo de Residuos Peligrosos y Certificados de Disposición Final.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 3 -->
+                    <div class="bg-white rounded-3xl border border-slateCustom-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-slateCustom-900 text-white p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="bg-copper-600 text-white text-[10px] font-heading font-bold uppercase tracking-widest px-3 py-1 rounded-full">Bloque 03</span>
+                                <h3 class="font-heading font-bold text-xl mt-4 mb-2">Servicios Operativos, Logística y Alquiler de Maquinaria</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Despliegue operativo y maquinaria para dinamizar el trabajo dentro de sus instalaciones.
+                                </p>
+                            </div>
+                            <div class="pt-6">
+                                <button onclick="navigateTo('contacto')" class="w-full bg-copper-gradient text-white font-heading font-bold text-xs uppercase py-3 rounded-xl">
+                                    Alquilar Equipos
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slateCustom-50">
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-sitemap text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Segregación en Fuente</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Separación técnica de residuos en su propia planta industrial.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-truck-ramp-box text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Logística Interna/Externa</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Planificación y retiro programado de materiales según demanda.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-dolly text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Alquiler de Montacargas</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Unidades con distintas capacidades por hora, día o proyecto (con o sin operador).</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slateCustom-200">
+                                <i class="fa-solid fa-people-carry-box text-copper-600 text-xl mb-2"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Estiba y Carga</h4>
+                                <p class="text-xs text-slateCustom-600 mt-1">Personal especializado en embalaje, trincado y acomodo seguro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Procedimientos Técnicos (Forma de Trabajo en 6 Pasos) -->
+                <div class="pt-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-copper-600 font-heading font-bold text-xs uppercase tracking-widest">Paso a Paso</span>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slateCustom-900 mt-1">Procedimientos Técnicos de Trabajo</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">01</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Visita y Asesoría</h4>
+                            <p class="text-xs text-slateCustom-600">Identificación de tipos de residuos, volúmenes, características y forma de acopio.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">02</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Propuesta Técnica</h4>
+                            <p class="text-xs text-slateCustom-600">Informe técnico del servicio a ejecutar acordado formalmente con el cliente.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">03</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Equipo Técnico</h4>
+                            <p class="text-xs text-slateCustom-600">Coordinación de unidades autorizadas y personal capacitado según el residuo.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">04</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Ejecución del Servicio</h4>
+                            <p class="text-xs text-slateCustom-600">Maniobra y recolección operativa operando bajo estricta normativa ambiental.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">05</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Disposición Final</h4>
+                            <p class="text-xs text-slateCustom-600">Derivación técnica hacia plantas de valorización o rellenos sanitarios/seguridad autorizados.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-slateCustom-200 shadow-sm relative">
+                            <span class="text-3xl font-black text-copper-500/20 absolute top-4 right-4">06</span>
+                            <h4 class="font-heading font-bold text-slateCustom-900 text-base mb-2">Documentación Oficial</h4>
+                            <p class="text-xs text-slateCustom-600">Entrega de certificados y manifiestos que respaldan legalmente el servicio ante fiscalizaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =================================================================
+             VISTA 4: DESARROLLO SOSTENIBLE (PÁGINA DETALLADA)
+        ================================================================== -->
+        <div id="view-desarrollo-sostenible" class="page-view">
+            <!-- Header Banner Vista -->
+            <div class="bg-gradient-to-r from-slateCustom-950 via-slateCustom-900 to-slateCustom-800 text-white py-12 border-b border-copper-600/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <span class="text-copper-400 font-heading text-xs font-bold uppercase tracking-widest">Compromiso Ambiental</span>
+                    <h1 class="font-heading text-3xl sm:text-4xl font-extrabold mt-1">Desarrollo Sostenible & Certificaciones</h1>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 py-16 space-y-12">
+                
+                <div class="max-w-3xl space-y-4">
+                    <h2 class="font-heading text-2xl font-extrabold text-slateCustom-900">Sistema de Gestión Integrado (SGI)</h2>
+                    <p class="text-slateCustom-700 text-sm leading-relaxed">
+                        Nuestro Sistema de Gestión Integrado es una herramienta de garantía de cumplimiento de estándares estipulados por normas internacionales. Promovemos la economía circular y la meta de <strong class="text-slateCustom-900">Zero Waste to Landfill</strong> en cada etapa de la gestión de residuos.
+                    </p>
+                </div>
+
+                <!-- Tarjetas Certificaciones ISO -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-2xl bg-white border-2 border-copper-500/30 text-center shadow-md">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-slateCustom-900 text-copper-400 flex items-center justify-center text-2xl font-bold mb-4 font-heading">
+                            9001
+                        </div>
+                        <h3 class="font-heading font-bold text-slateCustom-900 text-base mb-1">ISO 9001</h3>
+                        <p class="text-xs text-slateCustom-600">Sistema de Gestión de Calidad en todos nuestros procesos operativos.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white border-2 border-copper-500/30 text-center shadow-md">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-slateCustom-900 text-copper-400 flex items-center justify-center text-2xl font-bold mb-4 font-heading">
+                            14001
+                        </div>
+                        <h3 class="font-heading font-bold text-slateCustom-900 text-base mb-1">ISO 14001</h3>
+                        <p class="text-xs text-slateCustom-600">Sistema de Gestión del Medio Ambiente para minimizar el impacto ecológico.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white border-2 border-copper-500/30 text-center shadow-md">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-slateCustom-900 text-copper-400 flex items-center justify-center text-2xl font-bold mb-4 font-heading">
+                            45001
+                        </div>
+                        <h3 class="font-heading font-bold text-slateCustom-900 text-base mb-1">ISO 45001</h3>
+                        <p class="text-xs text-slateCustom-600">Sistema de Gestión de Seguridad y Salud en el Trabajo para nuestros técnicos.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white border-2 border-copper-500/30 text-center shadow-md">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-slateCustom-900 text-copper-400 flex items-center justify-center text-2xl font-bold mb-4 font-heading">
+                            37001
+                        </div>
+                        <h3 class="font-heading font-bold text-slateCustom-900 text-base mb-1">ISO 37001</h3>
+                        <p class="text-xs text-slateCustom-600">Sistema de Gestión Antisoborno garantizando ética y transparencia.</p>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-slateCustom-900 text-white border border-copper-600/40">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i class="fa-solid fa-leaf text-3xl text-copper-400"></i>
+                        <h3 class="font-heading font-bold text-xl">Política de Transparencia Ambiental</h3>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Inversiones Recymat S.A.C. asegura a cada cliente la trazabilidad documental y física de sus materiales aprovechables y peligrosos. Entregamos reportes detallados aptos para auditorías internas y gubernamentales del MINAM y OEFA.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =================================================================
+             VISTA 5: CONTACTO (PÁGINA DETALLADA CON FORMULARIO COMPLETO)
+        ================================================================== -->
+        <div id="view-contacto" class="page-view">
+            <!-- Header Banner Vista -->
+            <div class="bg-gradient-to-r from-slateCustom-950 via-slateCustom-900 to-slateCustom-800 text-white py-12 border-b border-copper-600/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                    <span class="text-copper-400 font-heading text-xs font-bold uppercase tracking-widest">Atención Comercial</span>
+                    <h1 class="font-heading text-3xl sm:text-4xl font-extrabold mt-1">Contáctenos & Cotizaciones</h1>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Información de Contacto -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <h2 class="font-heading text-2xl font-extrabold text-slateCustom-900">Manténgase en Contacto</h2>
+                            <p class="text-slateCustom-600 text-sm mt-2">
+                                Ponemos a su disposición distintas maneras de contactarnos. Envíenos su requerimiento y será atendido a la brevedad por nuestros asesores.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slateCustom-500 uppercase font-bold block">Teléfono Principal</span>
+                                    <a href="tel:51946353506" class="text-lg font-bold text-slateCustom-900 hover:text-copper-600 transition">+51 946 353 506</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slateCustom-500 uppercase font-bold block">Correo Electrónico</span>
+                                    <a href="mailto:comercialrecymat@gmail.com" class="text-sm font-bold text-slateCustom-900 hover:text-copper-600 block">comercialrecymat@gmail.com</a>
+                                    <a href="mailto:contacto@residuoslimaperu.com" class="text-xs text-slateCustom-600 hover:text-slateCustom-900">contacto@residuoslimaperu.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-600 text-white flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slateCustom-500 uppercase font-bold block">Sede Principal</span>
+                                    <p class="text-sm font-medium text-slateCustom-900">Prol. Chimpu Ocllo, Puente Piedra (Rosa Luz), Lima - Perú</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card de WhatsApp Rápido -->
+                        <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-200">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i class="fa-brands fa-whatsapp text-2xl text-emerald-600"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Atención WhatsApp Inmediata</h4>
+                            </div>
+                            <p class="text-xs text-slateCustom-600 mb-4">¿Necesita una cotización urgente para retiro de materiales en planta?</p>
+                            <a href="https://wa.me/51946353506?text=Hola,%20solicito%20cotizaci%C3%B3n%20para%20un%20servicio" target="_blank" 
+                               class="inline-block bg-emerald-600 text-white font-heading font-bold text-xs uppercase px-5 py-2.5 rounded-xl">
+                                Escribir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Requerimiento -->
+                    <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slateCustom-200 shadow-xl">
+                        <h3 class="font-heading font-bold text-xl text-slateCustom-900 mb-1">Formulario de Requerimiento</h3>
+                        <p class="text-xs text-slateCustom-500 mb-6">Complete los campos obligatorios para enviar su solicitud.</p>
+
+                        <form id="contact-form-page" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Nombres y Apellidos *</label>
+                                    <input type="text" required placeholder="Ej. Carlos Mendoza" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Teléfono *</label>
+                                    <input type="tel" required placeholder="Ej. 946353506" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Provincia / Distrito *</label>
+                                    <input type="text" required placeholder="Ej. Puente Piedra, Lima" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Servicio Requerido *</label>
+                                    <select required class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm bg-white">
+                                        <option value="">- Seleccione -</option>
+                                        <option value="aprovechables">Residuos Aprovechables (No Peligrosos)</option>
+                                        <option value="peligrosos">Gestión Integral de Residuos Peligrosos</option>
+                                        <option value="alquiler">Alquiler de Montacargas y Logística</option>
+                                        <option value="destruccion">Destrucción de Bienes</option>
+                                        <option value="otro">Otros Requerimientos</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Correo Electrónico *</label>
+                                <input type="email" required placeholder="empresa@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Requerimiento *</label>
+                                <textarea rows="4" required placeholder="¿En qué le podemos ayudar?" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm"></textarea>
+                            </div>
+
+                            <div id="form-status" class="hidden p-3 rounded-xl text-xs font-medium"></div>
+
+                            <button type="submit" class="w-full bg-copper-gradient hover:opacity-95 text-white font-heading font-bold py-4 rounded-xl shadow-md text-xs uppercase tracking-wider flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER (PIE DE PÁGINA COMÚN)
+    =========================================== -->
+    <footer class="bg-slateCustom-950 text-white border-t border-slateCustom-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-copper-600 text-white flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <span class="font-heading font-bold text-base tracking-tight">RECYMAT S.A.C.</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Inversiones Recymat S.A.C. - Empresa Operadora de Residuos Sólidos registrada en el MINAM.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xs uppercase text-copper-400 tracking-wider mb-3">Navegación</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><button onclick="navigateTo('inicio')" class="hover:text-white transition">Inicio</button></li>
+                        <li><button onclick="navigateTo('nosotros')" class="hover:text-white transition">Nosotros</button></li>
+                        <li><button onclick="navigateTo('servicios')" class="hover:text-white transition">Servicios</button></li>
+                        <li><button onclick="navigateTo('desarrollo-sostenible')" class="hover:text-white transition">Desarrollo Sostenible</button></li>
+                        <li><button onclick="navigateTo('contacto')" class="hover:text-white transition">Contacto</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xs uppercase text-copper-400 tracking-wider mb-3">Servicios</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><span>Residuos No Peligrosos</span></li>
+                        <li><span>Residuos Peligrosos</span></li>
+                        <li><span>Alquiler de Montacargas</span></li>
+                        <li><span>Destrucción de Bienes</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xs uppercase text-copper-400 tracking-wider mb-3">Sedes & Datos</h4>
+                    <p class="text-xs text-slate-400">Prol. Chimpu Ocllo, Puente Piedra (Rosa Luz), Lima - Perú</p>
+                    <p class="text-xs text-slate-400 mt-2 font-mono">RUC: 20613936328</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slateCustom-800 text-center md:flex md:justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Inversiones Recymat S.A.C. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0 font-mono">MINAM EO-RS N° D000110-2026-MINAM-VMGA-DGGRS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/51946353506?text=Hola,%20requiero%20asesor%C3%ADa%20sobre%20gesti%C3%B3n%20de%20residuos" 
+       target="_blank" 
+       aria-label="WhatsApp"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-whatsappGreen text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT DE NAVEGACIÓN SPA -->
+    <script>
+        // Enrutador simple para SPA y Hash Routing
+        function navigateTo(viewId) {
+            // Ocultar todas las vistas
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.remove('active');
+            });
+
+            // Mostrar vista seleccionada
+            const targetView = document.getElementById(`view-${viewId}`);
+            if (targetView) {
+                targetView.classList.add('active');
+            }
+
+            // Actualizar estilo en links de navegación
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active-nav');
+            });
+            const activeNav = document.getElementById(`nav-${viewId}`);
+            if (activeNav) {
+                activeNav.classList.add('active-nav');
+            }
+
+            // Cerrar menú móvil si está abierto
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+
+            // Scroll al inicio suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Actualizar Hash URL
+            window.location.hash = viewId;
+        }
+
+        // Cargar vista inicial según hash o default 'inicio'
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentHash = window.location.hash.replace('#', '');
+            if (currentHash && document.getElementById(`view-${currentHash}`)) {
+                navigateTo(currentHash);
+            } else {
+                navigateTo('inicio');
+            }
+        });
+
+        // Toggle Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Formulario Contacto
+        const contactForm = document.getElementById('contact-form-page');
+        const formStatus = document.getElementById('form-status');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                formStatus.classList.add('bg-emerald-100', 'text-emerald-800');
+                formStatus.innerHTML = '<i class="fa-solid fa-check-circle mr-1"></i> Su requerimiento ha sido enviado con éxito. Nos comunicaremos con usted a la brevedad.';
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 6000);
+            });
+        }
+    </script>
+</body>
+</html>
