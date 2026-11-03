@@ -133,7 +133,7 @@
     <header class="bg-slateCustom-900 text-white sticky top-0 z-50 shadow-lg border-b border-slateCustom-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
             
-            <!-- Logo Oficial RECYMAT S.A.C. (Imagen JPG/JPEG) -->
+            <!-- Logo Oficial RECYMAT S.A.C. -->
             <a href="#inicio" onclick="navigateTo('inicio')" class="flex items-center space-x-3 group">
                 <img src="logo.jpeg" alt="Logo Recymat S.A.C." class="h-12 w-auto object-contain rounded-xl">
                 <div>
@@ -427,37 +427,40 @@
                 </div>
             </section>
 
-            <!-- Clientes Destacados -->
-            <section class="py-12 bg-slateCustom-100">
+            <!-- Clientes Destacados con Tarjetas para Logos (6 Marcas) -->
+            <section class="py-14 bg-slateCustom-100 border-t border-slateCustom-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-8">
-                    <p class="text-center font-heading text-xs font-bold uppercase tracking-widest text-slateCustom-500 mb-8">
+                    <p class="text-center font-heading text-xs font-bold uppercase tracking-widest text-slateCustom-600 mb-8">
                         Empresas que confían en nuestra gestión
                     </p>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
-                                
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/sodimac.png" alt="Sodimac" class="max-h-12 max-w-full object-contain">
-                                </div>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/sodimac.png" alt="Sodimac" class="max-h-12 max-w-full object-contain">
+                        </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/popeyes.png" alt="Popeyes" class="max-h-12 max-w-full object-contain">
-                                </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/popeyes.png" alt="Popeyes" class="max-h-12 max-w-full object-contain">
+                        </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/metro.png" alt="Metro" class="max-h-12 max-w-full object-contain">
-                                </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/metro.png" alt="Metro" class="max-h-12 max-w-full object-contain">
+                        </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/wong.png" alt="Wong" class="max-h-12 max-w-full object-contain">
-                                </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/wong.png" alt="Wong" class="max-h-12 max-w-full object-contain">
+                        </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/don-belisario.png" alt="Don Belisario" class="max-h-12 max-w-full object-contain">
-                                </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/don-belisario.png" alt="Don Belisario" class="max-h-12 max-w-full object-contain">
+                        </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
-                                    <img src="logos/aris.png" alt="Aris Industrial" class="max-h-12 max-w-full object-contain">
-                                </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 hover:shadow-md transition">
+                            <img src="logos/aris.png" alt="Aris Industrial" class="max-h-12 max-w-full object-contain">
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -841,7 +844,7 @@
         </div>
 
         <!-- =================================================================
-             VISTA 5: CONTACTO (PÁGINA DETALLADA CON FORMULARIO COMPLETO)
+             VISTA 5: CONTACTO (FORMULARIO CON DESPLEGABLES DINÁMICOS)
         ================================================================== -->
         <div id="view-contacto" class="page-view">
             <!-- Header Banner Vista -->
@@ -928,11 +931,29 @@
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- CAMPOS DESPLEGABLES EN CASCADA (PAÍS, PROVINCIA, DISTRITO) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Provincia / Distrito *</label>
-                                    <input type="text" required placeholder="Ej. Puente Piedra, Lima" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">País *</label>
+                                    <select id="select-pais" required class="w-full px-3 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm bg-white">
+                                        <!-- Se puebla dinámicamente -->
+                                    </select>
                                 </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Provincia *</label>
+                                    <select id="select-provincia" required class="w-full px-3 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm bg-white">
+                                        <!-- Se puebla dinámicamente -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Distrito *</label>
+                                    <select id="select-distrito" required class="w-full px-3 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm bg-white">
+                                        <!-- Se puebla dinámicamente -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Servicio Requerido *</label>
                                     <select required class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm bg-white">
@@ -944,11 +965,10 @@
                                         <option value="otro">Otros Requerimientos</option>
                                     </select>
                                 </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Correo Electrónico *</label>
-                                <input type="email" required placeholder="empresa@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Correo Electrónico *</label>
+                                    <input type="email" required placeholder="empresa@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                </div>
                             </div>
 
                             <div>
@@ -982,7 +1002,7 @@
                 
                 <!-- COLUMNA 1: LOGO CIRCULAR Y REDES SOCIALES -->
                 <div class="md:col-span-4 flex flex-col items-center md:items-start gap-5">
-                    <!-- Contenedor Circular del Logo (Imagen JPG/JPEG) -->
+                    <!-- Contenedor Circular del Logo -->
                     <div class="w-36 h-36 rounded-full bg-white border-2 border-copper-400 flex items-center justify-center p-3 shadow-xl overflow-hidden">
                         <img src="logo.jpeg" alt="Logo Recymat S.A.C." class="w-full h-full object-contain">
                     </div>
@@ -998,7 +1018,6 @@
 
                 <!-- COLUMNA 2: SERVICIOS -->
                 <div class="md:col-span-4 space-y-4">
-                    <!-- TÍTULO CON NAVEGACIÓN A LA SECCIÓN DE SERVICIOS -->
                     <h4 onclick="navigateTo('servicios')" class="font-heading text-2xl font-bold text-white tracking-wide cursor-pointer hover:text-copper-400 transition-colors inline-block">
                         Servicios
                     </h4>
@@ -1026,7 +1045,6 @@
 
                 <!-- COLUMNA 3: CONTÁCTENOS -->
                 <div class="md:col-span-4 space-y-4">
-                    <!-- TÍTULO CON NAVEGACIÓN A LA SECCIÓN DE CONTACTO -->
                     <h4 onclick="navigateTo('contacto')" class="font-heading text-2xl font-bold text-white tracking-wide cursor-pointer hover:text-copper-400 transition-colors inline-block">
                         Contáctenos
                     </h4>
@@ -1061,22 +1079,122 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- JAVASCRIPT DE NAVEGACIÓN SPA -->
+    <!-- JAVASCRIPT DE NAVEGACIÓN SPA Y DESPLEGABLES EN CASCADA -->
     <script>
+        // Data estructurada de Geografía (País -> Provincia -> Distrito)
+        const ubicacionesData = {
+            "Perú": {
+                "Lima": ["Puente Piedra", "Comas", "Los Olivos", "San Juan de Lurigancho", "Ate", "Lurín", "Miraflores", "San Isidro", "Ventanilla", "Carabayllo", "San Martin de Porres", "Independencia", "Chorrillos", "Villa El Salvador", "Otro Distrito"],
+                "Callao": ["Callao Central", "Ventanilla", "Bellavista", "Carmen de la Legua", "La Perla", "La Punta"],
+                "Arequipa": ["Arequipa Central", "Cerro Colorado", "Cayma", "Yura", "Mataharani", "Otro Distrito"],
+                "La Libertad": ["Trujillo", "Salaverry", "La Esperanza", "El Porvenir", "Huanchaco", "Otro Distrito"],
+                "Piura": ["Piura Central", "Sullana", "Talara", "Paita", "Catacaos", "Otro Distrito"],
+                "Tumbes": ["Zorritos", "Tumbes Central", "Zarumilla", "Otro Distrito"],
+                "Ancash": ["Chimbote", "Nuevo Chimbote", "Huaraz", "Coishco", "Otro Distrito"],
+                "Ica": ["Ica Central", "Pisco", "Chincha Alta", "Nasca", "Otro Distrito"],
+                "Junín": ["Huancayo", "El Tambo", "Chilca", "La Oroya", "Otro Distrito"],
+                "Cusco": ["Cusco Central", "Wanchaq", "San Sebastián", "San Jerónimo", "Otro Distrito"],
+                "Lambayeque": ["Chiclayo", "José Leonardo Ortiz", "La Victoria", "Lambayeque", "Otro Distrito"],
+                "Otras Provincias": ["Otro Distrito / Municipio"]
+            },
+            "Chile": {
+                "Santiago (RM)": ["Santiago Centro", "Providencia", "Las Condes", "Maipú", "Pudahuel", "Otro"],
+                "Valparaíso": ["Valparaíso", "Viña del Mar", "San Antonio", "Otro"],
+                "Antofagasta": ["Antofagasta", "Calama", "Otro"],
+                "Otras Regiones": ["Otra Comuna"]
+            },
+            "Colombia": {
+                "Bogotá D.C.": ["Bogotá", "Usaquén", "Suba", "Chapinero", "Otro"],
+                "Antioquia": ["Medellín", "Envigado", "Itagüí", "Rionegro", "Otro"],
+                "Valle del Cauca": ["Cali", "Buenaventura", "Yumbo", "Otro"],
+                "Otros Departamentos": ["Otro Municipio"]
+            },
+            "Ecuador": {
+                "Pichincha": ["Quito", "Rumiñahui", "Otro"],
+                "Guayas": ["Guayaquil", "Samborondón", "Durán", "Otro"],
+                "Otras Provincias": ["Otro Cantón"]
+            },
+            "Bolivia": {
+                "La Paz": ["La Paz", "El Alto", "Otro"],
+                "Santa Cruz": ["Santa Cruz de la Sierra", "Warnes", "Otro"],
+                "Otros Departamentos": ["Otro Municipio"]
+            },
+            "Otro País": {
+                "Otra Provincia / Estado": ["Otra Ciudad / Distrito"]
+            }
+        };
+
+        const selectPais = document.getElementById('select-pais');
+        const selectProvincia = document.getElementById('select-provincia');
+        const selectDistrito = document.getElementById('select-distrito');
+
+        // Función para cargar los distritos según la provincia seleccionada
+        function cargarDistritos(pais, provincia) {
+            selectDistrito.innerHTML = '';
+            const distritos = ubicacionesData[pais]?.[provincia] || ["Otro Distrito"];
+            distritos.forEach(dist => {
+                const option = document.createElement('option');
+                option.value = dist;
+                option.textContent = dist;
+                selectDistrito.appendChild(option);
+            });
+        }
+
+        // Función para cargar las provincias según el país seleccionado
+        function cargarProvincias(pais) {
+            selectProvincia.innerHTML = '';
+            const provincias = Object.keys(ubicacionesData[pais] || {});
+            provincias.forEach(prov => {
+                const option = document.createElement('option');
+                option.value = prov;
+                option.textContent = prov;
+                selectProvincia.appendChild(option);
+            });
+
+            // Cargar por defecto la primera provincia del país seleccionado
+            if (provincias.length > 0) {
+                cargarDistritos(pais, provincias[0]);
+            }
+        }
+
+        // Inicializar selectores dinámicos
+        function initLocationSelectors() {
+            if (!selectPais) return;
+
+            // Cargar Lista de Países
+            selectPais.innerHTML = '';
+            Object.keys(ubicacionesData).forEach(pais => {
+                const option = document.createElement('option');
+                option.value = pais;
+                option.textContent = pais;
+                if (pais === "Perú") option.selected = true; // Perú Predeterminado
+                selectPais.appendChild(option);
+            });
+
+            // Cargar Provincias y Distritos iniciales para Perú
+            cargarProvincias("Perú");
+
+            // Event Listeners para cambios de selección
+            selectPais.addEventListener('change', (e) => {
+                cargarProvincias(e.target.value);
+            });
+
+            selectProvincia.addEventListener('change', (e) => {
+                cargarDistritos(selectPais.value, e.target.value);
+            });
+        }
+
         // Enrutador simple para SPA y Hash Routing
         function navigateTo(viewId) {
-            // Ocultar todas las vistas
             document.querySelectorAll('.page-view').forEach(view => {
                 view.classList.remove('active');
             });
 
-            // Mostrar vista seleccionada
             const targetView = document.getElementById(`view-${viewId}`);
             if (targetView) {
                 targetView.classList.add('active');
             }
 
-            // Actualizar estilo en links de navegación
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active-nav');
             });
@@ -1085,21 +1203,19 @@
                 activeNav.classList.add('active-nav');
             }
 
-            // Cerrar menú móvil si está abierto
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenu) {
                 mobileMenu.classList.add('hidden');
             }
 
-            // Scroll al inicio suavemente
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Actualizar Hash URL
             window.location.hash = viewId;
         }
 
         // Cargar vista inicial según hash o default 'inicio'
         window.addEventListener('DOMContentLoaded', () => {
+            initLocationSelectors();
+
             const currentHash = window.location.hash.replace('#', '');
             if (currentHash && document.getElementById(`view-${currentHash}`)) {
                 navigateTo(currentHash);
@@ -1127,6 +1243,7 @@
                 formStatus.classList.add('bg-emerald-100', 'text-emerald-800');
                 formStatus.innerHTML = '<i class="fa-solid fa-check-circle mr-1"></i> Su requerimiento ha sido enviado con éxito. Nos comunicaremos con usted a la brevedad.';
                 contactForm.reset();
+                initLocationSelectors(); // Reiniciar los selectores a Perú
                 setTimeout(() => {
                     formStatus.classList.add('hidden');
                 }, 6000);
