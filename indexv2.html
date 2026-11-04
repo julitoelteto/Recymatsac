@@ -171,7 +171,7 @@
     <main class="flex-grow">
 
         <!-- =================================================================
-             VISTA 1: INICIO (BANNER CON LETRAS MÁS GRANDES Y NEGRITAS)
+             VISTA 1: INICIO
         ================================================================== -->
         <div id="view-inicio" class="page-view active">
             
@@ -184,7 +184,6 @@
                             <span>Operadora de Residuos Sólidos Autorizada</span>
                         </div>
 
-                        <!-- Título 1 punto más grande y en Negrita Extrema (font-black) -->
                         <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-white text-hero-clean">
                             Recolección y transportes de residuos sólidos no peligrosos y peligrosos
                         </h1>
@@ -275,7 +274,7 @@
                 </div>
             </section>
 
-            <!-- Resumen Servicios -->
+            <!-- Resumen Servicios (MODAL VINCULADO A TUS IMÁGENES LOCALES WEBP) -->
             <section class="py-16 bg-slateCustom-900 text-white border-y border-slateCustom-800">
                 <div class="max-w-7xl mx-auto px-4 sm:px-8">
                     <div class="text-center max-w-3xl mx-auto mb-12">
@@ -284,6 +283,8 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- CARD 1: RESIDUOS APROVECHABLES -->
                         <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-amberYellow-500 transition duration-300 flex flex-col justify-between">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-amberYellow-400 flex items-center justify-center text-2xl mb-4">
@@ -294,13 +295,14 @@
                                     Compra y aprovisionamiento comercial de RAEE, metales ferrosos/no ferrosos, plásticos industriales y pallets.
                                 </p>
                             </div>
-                            <button onclick="openModal('Residuos Aprovechables (No Peligrosos)', 'Compramos y gestionamos RAEE, chatarra metálica, plásticos de alta densidad y parihuelas de madera en desuso para reintegrarlos en la cadena productiva mediante economía circular.', 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800')" 
+                            <button onclick="openModal('Residuos Aprovechables (No Peligrosos)', 'Compramos y gestionamos RAEE, chatarra metálica, plásticos de alta densidad y parihuelas de madera en desuso para reintegrarlos en la cadena productiva mediante economía circular.', 'imagenes/inicio/residuosnopeligrosos.webp')" 
                                     class="text-amberYellow-400 hover:text-amberYellow-300 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2">
                                 <span>Detalles del servicio</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
                         </div>
 
+                        <!-- CARD 2: RESIDUOS PELIGROSOS -->
                         <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-amberYellow-500 transition duration-300 flex flex-col justify-between">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-amberYellow-400 flex items-center justify-center text-2xl mb-4">
@@ -311,13 +313,14 @@
                                     Recolección, transporte acondicionado, disposición final en relleno de seguridad y entrega de certificados.
                                 </p>
                             </div>
-                            <button onclick="openModal('Gestión Integral de Residuos Peligrosos', 'Manejo seguro de aceites usados, baterías, insumos químicos y envases contaminados. Contamos con flota homologada por el MINAM y entrega de Manifiestos de Manejo Oficiales.', 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&q=80&w=800')" 
+                            <button onclick="openModal('Gestión Integral de Residuos Peligrosos', 'Recolección, transporte acondicionado, disposición final en relleno de seguridad y entrega de certificados oficiales.', 'imagenes/inicio/residuospeligrosos.webp')" 
                                     class="text-amberYellow-400 hover:text-amberYellow-300 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2">
                                 <span>Detalles del servicio</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
                         </div>
 
+                        <!-- CARD 3: LOGÍSTICA & MONTACARGAS -->
                         <div class="bg-slateCustom-800 p-6 rounded-2xl border border-slateCustom-700 hover:border-amberYellow-500 transition duration-300 flex flex-col justify-between">
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-copper-600/20 border border-copper-500/40 text-amberYellow-400 flex items-center justify-center text-2xl mb-4">
@@ -328,12 +331,13 @@
                                     Alquiler de maquinarias con operadores certificados, segregación en fuente y servicios de estiba.
                                 </p>
                             </div>
-                            <button onclick="openModal('Logística Interna & Alquiler de Montacargas', 'Alquiler de equipos con operadores certificados por horas, días o proyectos. Maniobras seguras de estiba, empaque y segregación dentro de plantas industriales.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800')" 
+                            <button onclick="openModal('Logística Interna & Alquiler de Montacargas', 'Alquiler de maquinarias con operadores certificados, segregación en fuente y servicios de estiba en plantas industriales.', 'imagenes/inicio/logistica.webp')" 
                                     class="text-amberYellow-400 hover:text-amberYellow-300 font-heading text-xs uppercase font-bold text-left flex items-center space-x-2">
                                 <span>Detalles del servicio</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
                         </div>
+
                     </div>
 
                     <div class="text-center mt-10">
@@ -586,7 +590,7 @@
                         </div>
 
                         <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-slateCustom-50">
-                            <div onclick="openModal('Recolección y Transporte Peligroso', 'Flota acondicionada y normada por el MINAM para traslado de residuos peligrosos.', 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&q=80&w=800')"
+                            <div onclick="openModal('Recolección y Transporte Peligroso', 'Flota acondicionada y normada por el MINAM para traslado de residuos peligrosos.', 'imagenes/inicio/residuospeligrosos.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-truck-hazard text-copper-600 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Recolección y Transporte</h4>
@@ -627,28 +631,28 @@
                         </div>
 
                         <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slateCustom-50">
-                            <div onclick="openModal('Segregación en Fuente', 'Separación técnica de residuos dentro de su propia planta industrial.', 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800')"
+                            <div onclick="openModal('Segregación en Fuente', 'Separación técnica de residuos dentro de su propia planta industrial.', 'imagenes/inicio/residuosnopeligrosos.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-sitemap text-amberYellow-500 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Segregación en Fuente</h4>
                                 <p class="text-xs text-slateCustom-600 mt-1">Separación técnica de residuos en su planta industrial.</p>
                             </div>
 
-                            <div onclick="openModal('Logística Interna/Externa', 'Planificación y despacho técnico programado según necesidad del cliente.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800')"
+                            <div onclick="openModal('Logística Interna/Externa', 'Planificación y despacho técnico programado según necesidad del cliente.', 'imagenes/inicio/logistica.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-truck-ramp-box text-copper-600 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Logística Interna/Externa</h4>
                                 <p class="text-xs text-slateCustom-600 mt-1">Planificación y retiro programado de materiales.</p>
                             </div>
 
-                            <div onclick="openModal('Alquiler de Montacargas', 'Equipos con operador certificado por horas o proyectos.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800')"
+                            <div onclick="openModal('Alquiler de Montacargas', 'Equipos con operador certificado por horas o proyectos.', 'imagenes/inicio/logistica.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-dolly text-amberYellow-500 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Alquiler de Montacargas</h4>
                                 <p class="text-xs text-slateCustom-600 mt-1">Unidades con distintas capacidades (con o sin operador).</p>
                             </div>
 
-                            <div onclick="openModal('Estiba y Maniobras de Carga', 'Personal capacitado con EPPs para carga pesada e industrial.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800')"
+                            <div onclick="openModal('Estiba y Maniobras de Carga', 'Personal capacitado con EPPs para carga pesada e industrial.', 'imagenes/inicio/logistica.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-people-carry-box text-copper-600 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Estiba y Carga</h4>
@@ -1005,16 +1009,16 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- MODAL REUTILIZABLE -->
+    <!-- MODAL REUTILIZABLE (ESTILOS Y LAZY LOADING MEJORADOS) -->
     <div id="service-modal" class="fixed inset-0 bg-slateCustom-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl relative border border-amberYellow-500/30">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slateCustom-500 hover:text-slateCustom-900 text-xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slateCustom-400 hover:text-slateCustom-900 text-xl transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <img id="modal-img" src="" alt="Detalle del servicio" class="w-full h-52 object-cover rounded-2xl mb-4">
+            <img id="modal-img" src="" alt="Detalle del servicio" loading="lazy" class="w-full h-56 object-cover rounded-2xl mb-4 shadow-md border border-slateCustom-100">
             <h3 id="modal-title" class="font-heading font-bold text-xl text-slateCustom-900 mb-2"></h3>
             <p id="modal-desc" class="text-xs text-slateCustom-600 leading-relaxed mb-6"></p>
-            <button onclick="closeModal(); navigateTo('contacto');" class="w-full bg-copper-yellow-gradient text-slateCustom-950 font-heading font-extrabold text-xs uppercase py-3 rounded-xl">
+            <button onclick="closeModal(); navigateTo('contacto');" class="w-full bg-copper-yellow-gradient text-slateCustom-950 font-heading font-extrabold text-xs uppercase py-3.5 rounded-xl shadow-md">
                 Solicitar Cotización de este Servicio
             </button>
         </div>
