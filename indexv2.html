@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recymat v2 | Inversiones Recymat S.A.C. - Operadora de Residuos Sólidos</title>
+    <title>Recymat | Inversiones Recymat S.A.C. - Operadora de Residuos Sólidos</title>
+
+    <link rel="icon" type="image/png" href="logos/logoinicio.png">
+
     <meta name="description" content="Inversiones Recymat S.A.C. - Aliado estratégico en gestión ambiental, recolección, transporte y valorización de residuos sólidos no peligrosos y peligrosos. Registro MINAM EO-RS N° D000110-2026.">
     
     <!-- Tailwind CSS CDN -->
@@ -118,7 +121,7 @@
             
             <!-- Logo Oficial RECYMAT S.A.C. -->
             <button onclick="navigateTo('inicio')" class="flex items-center space-x-3 group text-left focus:outline-none">
-                <img src="logos/logo.jpeg" alt="Logo Recymat S.A.C." class="h-11 w-auto object-contain rounded-xl border border-amberYellow-500/30">
+                <img src="logos/logoinicio.png" alt="Logo Recymat S.A.C." class="h-11 w-auto object-contain rounded-xl border border-amberYellow-500/30">
                 <div>
                     <span class="font-heading font-black text-xl tracking-tight leading-none block text-white">
                         RECYMAT <span class="text-amberYellow-500 text-sm font-extrabold">S.A.C.</span>
@@ -135,14 +138,13 @@
                 <button onclick="navigateTo('nosotros')" id="nav-nosotros" class="nav-link hover:text-amberYellow-400 py-1 transition focus:outline-none">Nosotros</button>
                 <button onclick="navigateTo('servicios')" id="nav-servicios" class="nav-link hover:text-amberYellow-400 py-1 transition focus:outline-none">Servicios</button>
                 <button onclick="navigateTo('desarrollo-sostenible')" id="nav-desarrollo-sostenible" class="nav-link hover:text-amberYellow-400 py-1 transition focus:outline-none">Desarrollo Sostenible</button>
-                <button onclick="navigateTo('contacto')" id="nav-contacto" class="nav-link hover:text-amberYellow-400 py-1 transition focus:outline-none">Contacto</button>
             </nav>
 
             <!-- Botón Cotizar Header -->
             <div class="hidden sm:flex items-center space-x-4">
                 <button onclick="navigateTo('contacto')" 
                         class="bg-copper-yellow-gradient hover:opacity-95 text-slateCustom-950 font-heading font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-lg transition duration-200">
-                    Cotizar Ahora
+                    Contacto
                 </button>
             </div>
 
@@ -637,7 +639,7 @@
                         </div>
 
                         <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slateCustom-50">
-                            <div onclick="openModal('Segregación en Fuente', 'Separación técnica de residuos dentro de su propia planta industrial.', 'imagenes/inicio/residuosnopeligrosos.webp')"
+                            <div onclick="openModal('Segregación en Fuente', 'Separación técnica de residuos dentro de su propia planta industrial.', 'imagenes/servicios/segregacion.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-sitemap text-amberYellow-500 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Segregación en Fuente</h4>
@@ -651,14 +653,14 @@
                                 <p class="text-xs text-slateCustom-600 mt-1">Planificación y retiro programado de materiales.</p>
                             </div>
 
-                            <div onclick="openModal('Alquiler de Montacargas', 'Equipos con operador certificado por horas o proyectos.', 'imagenes/inicio/logistica.webp')"
+                            <div onclick="openModal('Alquiler de Montacargas', 'Equipos con operador certificado por horas o proyectos.', 'imagenes/servicios/alquiler.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-dolly text-amberYellow-500 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Alquiler de Montacargas</h4>
                                 <p class="text-xs text-slateCustom-600 mt-1">Unidades con distintas capacidades (con o sin operador).</p>
                             </div>
 
-                            <div onclick="openModal('Estiba y Maniobras de Carga', 'Personal capacitado con EPPs para carga pesada e industrial.', 'imagenes/inicio/logistica.webp')"
+                            <div onclick="openModal('Estiba y Maniobras de Carga', 'Personal capacitado con EPPs para carga pesada e industrial.', 'imagenes/servicios/estiba.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
                                 <i class="fa-solid fa-people-carry-box text-copper-600 text-xl mb-2"></i>
                                 <h4 class="font-heading font-bold text-sm text-slateCustom-900">Estiba y Carga</h4>
@@ -813,10 +815,10 @@
                         Atención Comercial
                     </span>
                     <h1 class="font-heading text-4xl sm:text-6xl font-black text-white text-hero-clean">
-                        Contáctenos &amp; Cotizaciones
+                        Contáctenos
                     </h1>
                     <p class="text-white text-base sm:text-lg font-bold mt-3 max-w-2xl text-hero-clean">
-                        Estamos listos para asesorarle y enviarle una propuesta técnica a la medida de sus operaciones industriales.
+                        Estamos preprarados para atenderte.
                     </p>
                 </div>
             </section>
