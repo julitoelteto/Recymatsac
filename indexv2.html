@@ -175,8 +175,10 @@
         ================================================================== -->
         <div id="view-inicio" class="page-view active">
             
-            <section class="relative bg-cover bg-center text-white pt-40 pb-24 lg:pt-48 lg:pb-36 border-b border-copper-600/40" 
+            <!-- Banner corregido con bg-no-repeat -->
+            <section class="relative bg-cover bg-center bg-no-repeat text-white pt-40 pb-24 lg:pt-48 lg:pb-36 border-b border-copper-600/40" 
                      style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1920');">
+                <div class="absolute inset-0 bg-gradient-to-b from-slateCustom-950/90 via-slateCustom-950/40 to-transparent pointer-events-none z-0"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                     <div class="max-w-4xl space-y-6 text-center sm:text-left">
                         <div class="inline-flex items-center space-x-2 bg-slateCustom-950/80 border border-white/50 px-4 py-1.5 rounded-full text-xs sm:text-sm text-white font-bold shadow-2xl backdrop-blur-sm">
@@ -385,7 +387,7 @@
                 </div>
             </section>
 
-            <!-- Carrusel Empresas -->
+            <!-- Carrusel Empresas (Estructura Limpia) -->
             <section class="py-14 bg-slateCustom-100 border-t border-slateCustom-200 overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 mb-6">
                     <p class="text-center font-heading text-xs font-bold uppercase tracking-widest text-slateCustom-600">
@@ -394,6 +396,7 @@
                 </div>
                 
                 <div class="relative w-full overflow-hidden flex">
+                    <!-- Primera tira de logos -->
                     <div class="flex space-x-6 animate-marquee whitespace-nowrap shrink-0 items-center">
                         <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 min-w-[160px]"><img src="logos/sodimac.png" alt="Sodimac" class="max-h-12 object-contain"></div>
                         <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 min-w-[160px]"><img src="logos/popeyes.png" alt="Popeyes" class="max-h-12 object-contain"></div>
@@ -408,6 +411,7 @@
                         <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 min-w-[160px]"><span class="font-heading font-black text-xs text-emerald-600">HEINEKEN</span></div>
                     </div>
 
+                    <!-- Segunda tira de logos (Clon para scroll infinito) -->
                     <div class="flex space-x-6 animate-marquee whitespace-nowrap shrink-0 items-center ml-6" aria-hidden="true">
                         <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 min-w-[160px]"><img src="logos/sodimac.png" alt="Sodimac" class="max-h-12 object-contain"></div>
                         <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slateCustom-200 flex items-center justify-center h-20 min-w-[160px]"><img src="logos/popeyes.png" alt="Popeyes" class="max-h-12 object-contain"></div>
@@ -431,14 +435,15 @@
         ================================================================== -->
         <div id="view-nosotros" class="page-view">
             
-            <section class="relative bg-cover bg-center text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
-                     style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1920');">
+            <section class="relative bg-cover bg-center bg-no-repeat text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
+                     style="background-image: url('imagenes/nosotros/backnosotros.webp');">
+                <div class="absolute inset-0 bg-gradient-to-b from-slateCustom-950/90 via-slateCustom-950/40 to-transparent pointer-events-none z-0"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                     <span class="inline-block bg-slateCustom-950/80 border border-white/50 px-4 py-1.5 rounded-full text-xs sm:text-sm text-white font-bold shadow-xl backdrop-blur-sm mb-3">
                         Inversiones Recymat S.A.C.
                     </span>
                     <h1 class="font-heading text-4xl sm:text-6xl font-black text-white text-hero-clean">
-                        Nosotros & Trayectoria
+                        Nosotros &amp; Trayectoria
                     </h1>
                     <p class="text-white text-base sm:text-lg font-bold mt-3 max-w-2xl text-hero-clean">
                         Más de 10 años conectando la industria peruana con soluciones sostenibles de acopio, valorización y gestión ambiental.
@@ -505,14 +510,15 @@
         ================================================================== -->
         <div id="view-servicios" class="page-view">
             
-            <section class="relative bg-cover bg-center text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
-                     style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1920');">
+            <section class="relative bg-cover bg-center bg-no-repeat text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
+                     style="background-image: url('imagenes/servicios/backservices.webp');">
+                <div class="absolute inset-0 bg-gradient-to-b from-slateCustom-950/90 via-slateCustom-950/40 to-transparent pointer-events-none z-0"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                     <span class="inline-block bg-slateCustom-950/80 border border-white/50 px-4 py-1.5 rounded-full text-xs sm:text-sm text-white font-bold shadow-xl backdrop-blur-sm mb-3">
                         Catálogo Operativo
                     </span>
                     <h1 class="font-heading text-4xl sm:text-6xl font-black text-white text-hero-clean">
-                        Servicios Técnicos & Soluciones
+                        Servicios Técnicos &amp; Soluciones
                     </h1>
                     <p class="text-white text-base sm:text-lg font-bold mt-3 max-w-2xl text-hero-clean">
                         Gestión integral de residuos peligrosos y no peligrosos, alquiler de maquinaria y servicios de logística especializada.
@@ -592,7 +598,8 @@
                         <div class="lg:col-span-8 p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-slateCustom-50">
                             <div onclick="openModal('Recolección y Transporte Peligroso', 'Flota acondicionada y normada por el MINAM para traslado de residuos peligrosos.', 'imagenes/inicio/residuospeligrosos.webp')"
                                  class="bg-white p-5 rounded-2xl border border-slateCustom-200 hover:border-amberYellow-500 cursor-pointer transition shadow-sm">
-                                <i class="fa-solid fa-truck-moving text-copper-600 text-xl mb-2 inline-block"></i>                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Recolección y Transporte</h4>
+                                <i class="fa-solid fa-truck-moving text-copper-600 text-xl mb-2 inline-block"></i>
+                                <h4 class="font-heading font-bold text-sm text-slateCustom-900">Recolección y Transporte</h4>
                                 <p class="text-xs text-slateCustom-600 mt-1">Flota acondicionada para aceites usados, baterías y químicos.</p>
                             </div>
 
@@ -716,14 +723,15 @@
         ================================================================== -->
         <div id="view-desarrollo-sostenible" class="page-view">
             
-            <section class="relative bg-cover bg-center text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
-                     style="background-image: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=1920');">
+            <section class="relative bg-cover bg-center bg-no-repeat text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
+                     style="background-image: url('imagenes/servicios/backsostenible.webp');">
+                <div class="absolute inset-0 bg-gradient-to-b from-slateCustom-950/90 via-slateCustom-950/40 to-transparent pointer-events-none z-0"></div>
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                     <span class="inline-block bg-slateCustom-950/80 border border-white/50 px-4 py-1.5 rounded-full text-xs sm:text-sm text-white font-bold shadow-xl backdrop-blur-sm mb-3">
                         Compromiso Ambiental
                     </span>
                     <h1 class="font-heading text-4xl sm:text-6xl font-black text-white text-hero-clean">
-                        Desarrollo Sostenible & Certificaciones
+                        Desarrollo Sostenible &amp; Certificaciones
                     </h1>
                     <p class="text-white text-base sm:text-lg font-bold mt-3 max-w-2xl text-hero-clean">
                         Garantía de cumplimiento ambiental bajo estándares ISO 9001, 14001, 45001 y 37001 alineados a la economía circular.
@@ -740,7 +748,7 @@
                     </p>
                 </div>
 
-                <!-- CARDS SGI CON IMÁGENES ISO EN LUGAR DE CÍRCULOS NEGROS -->
+                <!-- CARDS SGI CON IMÁGENES ISO -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="p-6 rounded-2xl bg-white border-2 border-copper-500/30 text-center shadow-md flex flex-col items-center justify-between">
                         <img src="imagenes/desarrollo/iso9001.png" alt="ISO 9001" loading="lazy" class="h-20 w-auto object-contain mb-4">
@@ -793,14 +801,19 @@
         ================================================================== -->
         <div id="view-contacto" class="page-view">
             
-            <section class="relative bg-cover bg-center text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
-                     style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920');">
+            <section class="relative bg-cover bg-center bg-no-repeat text-white pt-40 pb-20 lg:pt-48 lg:pb-24 border-b border-copper-600/40" 
+                     style="background-image: url('imagenes/contacto/backcontacto.webp');">
+                
+                <!-- Capa de degradado superior continuo y uniforme -->
+                <div class="absolute inset-0 bg-gradient-to-b from-slateCustom-950/90 via-slateCustom-950/40 to-transparent pointer-events-none z-0"></div>
+
+                <!-- Contenido con posicionamiento superior para legibilidad limpia -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                     <span class="inline-block bg-slateCustom-950/80 border border-white/50 px-4 py-1.5 rounded-full text-xs sm:text-sm text-white font-bold shadow-xl backdrop-blur-sm mb-3">
                         Atención Comercial
                     </span>
                     <h1 class="font-heading text-4xl sm:text-6xl font-black text-white text-hero-clean">
-                        Contáctenos & Cotizaciones
+                        Contáctenos &amp; Cotizaciones
                     </h1>
                     <p class="text-white text-base sm:text-lg font-bold mt-3 max-w-2xl text-hero-clean">
                         Estamos listos para asesorarle y enviarle una propuesta técnica a la medida de sus operaciones industriales.
@@ -881,8 +894,9 @@
                                     <input type="text" id="nombre" name="Nombre" required placeholder="Ej. Carlos Mendoza" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Teléfono *</label>
-                                    <input type="tel" id="telefono" name="Telefono" required placeholder="Ej. 999999999" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                    <!-- CAMPO TELÉFONO RESTRINGIDO A 9 DÍGITOS -->
+                                    <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Teléfono (9 dígitos) *</label>
+                                    <input type="tel" id="telefono" name="Telefono" required maxlength="9" minlength="9" pattern="[0-9]{9}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Ej. 999999999" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
                                 </div>
                             </div>
 
@@ -914,8 +928,9 @@
                                     </select>
                                 </div>
                                 <div>
+                                    <!-- CAMPO CORREO ELECTRÓNICO RESTRINGIDO A @ Y PUNTO -->
                                     <label class="block text-xs font-bold uppercase text-slateCustom-700 mb-1">Correo Electrónico *</label>
-                                    <input type="email" id="email" name="Email" required placeholder="empresa@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
+                                    <input type="email" id="email" name="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Ingrese un correo válido con @ y un dominio con punto (ejemplo: usuario@empresa.com)" placeholder="empresa@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slateCustom-300 focus:outline-none focus:ring-2 focus:ring-copper-600 text-sm">
                                 </div>
                             </div>
 
@@ -1088,6 +1103,13 @@
         function closeModal() {
             document.getElementById('service-modal').classList.add('hidden');
         }
+
+        /* CIERRE DEL MODAL AL PRESIONAR LA TECLA ESCAPE */
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                closeModal();
+            }
+        });
 
         const ubicacionesData = {
             "Perú": {
